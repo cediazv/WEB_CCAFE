@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  //-h1= title
+  div Hola #{title}
+  div Mensaje devuelto por llamado al api #[strong=uri]:#[br] #{objeto}
+  button(onclick='history.back()') Regresar!!!
