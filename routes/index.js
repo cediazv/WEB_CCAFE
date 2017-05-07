@@ -12,7 +12,7 @@ router.get('/saludo', function(req, res, next) {
     res.render('saludo', { title: 'bitch', uri: 'https://ccafeueb-s.herokuapp.com/test', objeto: JSON.stringify(data) });
   },
   function(er){
-    res.render('index', { title: 'Express', other: 'Bitch', palabra: 'calvario' });
+    res.render('saludo', { title: 'bitch', uri: 'https://ccafeueb-s.herokuapp.com/test', objeto: JSON.stringify(error) });
   });
 });
 
