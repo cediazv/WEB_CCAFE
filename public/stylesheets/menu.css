@@ -1,0 +1,83 @@
+aside.menu-container{
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	width: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    left: 0;
+    z-index: 10;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+}
+
+aside.menu-container.show{
+	visibility: visible;
+}
+
+aside.menu{
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	width: 300px;
+	background-color: #333;
+	overflow-x: hidden;
+	overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    left: 0;
+    z-index: 10;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+aside.menu-container aside.menu{
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    transform: translateX(-2em);
+    visibility: hidden;
+    opacity: 0.5;
+    left: -300px;
+}
+
+aside.menu-container.show aside.menu{
+	opacity: 1;
+	transform: translateX(0%);
+	transition-delay: 0s, 0s, 0.3s;
+	visibility: visible;
+	left: 0;
+}
+
+@media (max-width: 768px){
+	aside.menu-container{
+		right: 0;
+		width: inherit !important;
+	}
+
+	aside.menu{
+		width: 100% !important;
+		position: absolute !important;
+		left: inherit !important;
+		top: 0;
+		bottom: 0;
+	}
+
+	aside.btn-menu{
+		position: relative !important;
+	}
+
+	aside.menu-container aside.menu{
+		transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+	    transform: translateY(-2em);
+	    visibility: hidden;
+	    opacity: 0.5;
+	}
+
+	aside.menu-container.show aside.menu{
+		opacity: 1;
+		transform: translateY(0%);
+		transition-delay: 0s, 0s, 0.3s;
+		visibility: visible;
+	}
+}

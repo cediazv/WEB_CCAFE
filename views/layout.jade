@@ -2,7 +2,32 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/font.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src='/javascripts/menu.js')
     block scripts
   body
-    block content
+    header
+      section(class='fst-part')
+        aside(class='btn-menu')
+          button
+        div(class='logo-u')
+        section(class='bread-crumb')
+      section(class='scd-part')
+    aside(class='menu-container')
+      aside(class='menu') Algo
+    section(class='content')
+      block content
+    footer
+      section(class='info-u')
+        img(src='/images/logo.png')
+        span Edificio Fundadores Av. Cra 9 No. 131 A - 02
+        span Línea Gratuita 018000 113033
+        span PBX (571) 6489000
+      section(class='menu-dir')
+        nav(class='menu')
+          a(href='#') Inicio
+          a(href='#') Internacionalización
+          a(href='#') Normatividad
+          a(href='#') Quiénes somos
+          a(href='#') Contáctenos
