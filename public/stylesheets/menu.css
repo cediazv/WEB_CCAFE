@@ -53,9 +53,8 @@ nav.menu-ppal{
 		background-color: #7BC142;
 	}
 
-		nav.menu-ppal > div > a{
+		nav.menu-ppal > div > span{
 			color: #2e2e2e;
-			text-decoration: none;
 			text-transform: uppercase;
 		}
 
