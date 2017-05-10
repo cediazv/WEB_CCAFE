@@ -28,13 +28,33 @@
         http.onreadystatechange = function () {
             if (http.readyState == 4) {
                 if (http.status == 200) {
-                	debugger
+                	mostrarMenu(JSON.parse(http.responseText).data);
                 }
             }
         };
         http.send();
 
         return http;
+	}
+
+	var mostrarMenu = function(comites){
+		var menu = document.querySelector('.menu-ppal');
+		var menuF = document.querySelector('nav.menu');
+		var item = function(o){
+			var div = document.createElement('div');
+			div.setAttribute('cod_comite', o.cod_comite);
+			var span = document.createElement('span');
+			span.innerHTML = o.nombre_comite;
+			div.appendChild(span);
+			menu.appendChild(div);
+		}
+		var itemF = function(o){
+			var a = document.createElement('a');
+			a.href = '#';
+			a.innerHTML = o.nombre_comite;
+			menuF.appendChild(a);
+		}
+		comites.forEach(function(o){ item(o); itemF(o); });
 	}
 
 	window.onload = function(){
