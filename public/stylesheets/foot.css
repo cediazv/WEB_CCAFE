@@ -34,6 +34,7 @@ section.info-u{
 
 	section.info-u > span{
 		padding: 15px 0 0 0;
+		text-align: center;
 	}
 
 section.menu-dir{
@@ -66,7 +67,7 @@ section.menu-dir{
 		}
 
 		section.menu-dir > nav > a:hover{
-			    opacity: 0.7;
+		    color: #7BC142;
 		}
 
 @media (max-width: 960px){

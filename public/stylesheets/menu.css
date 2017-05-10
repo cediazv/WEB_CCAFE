@@ -17,12 +17,12 @@ aside.menu-container.show{
 	visibility: visible;
 }
 
-aside.menu{
+nav.menu-ppal{
 	position: fixed;
 	top: 50px;
 	bottom: 0;
 	width: 300px;
-	background-color: #333;
+    background-color: #F2F2F2;
 	overflow-x: hidden;
 	overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -31,18 +31,44 @@ aside.menu{
     -ms-flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: none;
+	-ms-flex-direction: column;
+	flex-flow: column nowrap;
+	-ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
+	
+	nav.menu-ppal > div{
+		padding: 10px;
+		cursor: pointer;
+		width: 100%;
+		text-align: center;
+	}
 
-aside.menu-container aside.menu{
+	nav.menu-ppal > div:hover{
+		background-color: #7BC142;
+	}
+
+		nav.menu-ppal > div > a{
+			color: #2e2e2e;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+aside.menu-container nav.menu-ppal{
 	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     transform: translateX(-2em);
     visibility: hidden;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     left: -300px;
 }
 
-aside.menu-container.show aside.menu{
-	opacity: 1;
+aside.menu-container.show nav.menu-ppal{
+	/*opacity: 1;*/
 	transform: translateX(0%);
 	transition-delay: 0s, 0s, 0.3s;
 	visibility: visible;
@@ -55,7 +81,7 @@ aside.menu-container.show aside.menu{
 		width: inherit !important;
 	}
 
-	aside.menu{
+	nav.menu-ppal{
 		width: 100% !important;
 		position: absolute !important;
 		left: inherit !important;
@@ -67,15 +93,15 @@ aside.menu-container.show aside.menu{
 		position: relative !important;
 	}
 
-	aside.menu-container aside.menu{
+	aside.menu-container nav.menu-ppal{
 		transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-	    transform: translateY(-2em);
+	    transform: translateY(-100%);
 	    visibility: hidden;
-	    opacity: 0.5;
+	    /*opacity: 0.5;*/
 	}
 
-	aside.menu-container.show aside.menu{
-		opacity: 1;
+	aside.menu-container.show nav.menu-ppal{
+		/*opacity: 1;*/
 		transform: translateY(0%);
 		transition-delay: 0s, 0s, 0.3s;
 		visibility: visible;
