@@ -49,7 +49,7 @@
 		}
 		var itemF = function(o){
 			var a = document.createElement('a');
-			a.href = '#';
+			a.href = '/principal?cod=' + o.cod_comite;
 			a.innerHTML = o.nombre_comite;
 			menuF.appendChild(a);
 		}
