@@ -16,4 +16,8 @@ router.get('/saludo', function(req, res, next) {
   });
 });
 
+router.get(/[/]principal/, function(req, res, next) {
+  res.render('principal', {  });
+});
+
 module.exports = router;

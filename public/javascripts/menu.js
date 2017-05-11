@@ -20,7 +20,6 @@
 	}
 
 	var cargarMenu = function(){
-		//https://ccafeueb-s.herokuapp.com/committees
         var http = new XMLHttpRequest();
         http.open('GET', 'https://ccafeueb-s.herokuapp.com/committees', true);
         http.setRequestHeader('Accept', 'application/json, text/javascript');
@@ -34,8 +33,6 @@
             }
         };
         http.send();
-
-        return http;
 	}
 
 	var mostrarMenu = function(comites){
@@ -47,6 +44,7 @@
 			var span = document.createElement('span');
 			span.innerHTML = o.nombre_comite;
 			div.appendChild(span);
+			div.onclick = function(){ window.location.href = '/principal?cod=' + o.cod_comite; };
 			menu.appendChild(div);
 		}
 		var itemF = function(o){
@@ -85,7 +83,7 @@
 		}
 	}
 
-	window.onload = function(){
+	AddEvent(window, 'load', function(){
 		load();
-	}
+	});
 })();
