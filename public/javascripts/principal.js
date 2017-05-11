@@ -16,7 +16,7 @@
                 	document.getElementById('nombre').innerHTML = data.nombre_comite;
                 	document.getElementById('fecha').innerHTML = data.f_creacion_comite;
 
-                    document.head.title = data.nombre_comite + ' - Facultad de Ingeniería - Universidad El Bosque';
+                    document.title = data.nombre_comite + ' - Facultad de Ingeniería - Universidad El Bosque';
                 }
             }
         };
