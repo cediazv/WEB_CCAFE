@@ -17,7 +17,7 @@ router.get('/saludo', function(req, res, next) {
 });
 
 router.get(/[/]principal/, function(req, res, next) {
-  res.render('principal', {  });
+  res.render('principal', { title: 'Facultad de Ingeniería - Universidad El Bosque' });
 });
 
 module.exports = router;
