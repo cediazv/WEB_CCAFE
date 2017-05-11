@@ -83,7 +83,6 @@ section.bread-crumb{
 }
 
 @media (max-width: 480px){
-	section.fst-part > a,
 	div.logo-u{
 		width: 100%;
 	}
