@@ -55,6 +55,8 @@ div.logo-u{
 	background-repeat: no-repeat;
 	background-size: auto 50px;
 	width: 171px;
+	height: 100%;
+	cursor: pointer;
 }
 
 section.bread-crumb{
@@ -81,6 +83,7 @@ section.bread-crumb{
 }
 
 @media (max-width: 480px){
+	section.fst-part > a,
 	div.logo-u{
 		width: 100%;
 	}

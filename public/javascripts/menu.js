@@ -2,6 +2,7 @@
 	var load = function(){
 		manageMenu();
 		cargarMenu();
+		cargarBuscador();
 	}
 
 	var manageMenu = function(){
@@ -55,6 +56,33 @@
 			menuF.appendChild(a);
 		}
 		comites.forEach(function(o){ item(o); itemF(o); });
+	}
+
+	var cargarBuscador = function(){
+		var txt = document.querySelector('.search-container input');
+		var focus = function(){
+			if (this.parentNode.classList.contains('focus')){
+				this.parentNode.classList.remove('focus');
+			}
+			else{
+				this.parentNode.classList.add('focus');
+			}
+		}
+		txt.onblur=focus;
+		txt.onfocus=focus;
+
+		var btnBusqueda = document.querySelector('.scd-part');
+		btnBusqueda.onclick = function(){
+			document.querySelector('.search-container').classList.add('show');
+			txt.focus();
+			this.style.display='none';
+		}
+
+		var btnClose = document.querySelector('aside.search-container aside.close');
+		btnClose.onclick = function(){
+			document.querySelector('.search-container').classList.remove('show');
+			btnBusqueda.style.display='';
+		}
 	}
 
 	window.onload = function(){

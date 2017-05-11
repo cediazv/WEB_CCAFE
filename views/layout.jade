@@ -9,17 +9,23 @@ html
     script(src='/javascripts/menu.js')
     block scripts
   body
+    aside(class='search-container')
+      div
+        aside(class='close')
+        input(type='text', placeholder='Ingrese su búsqueda...')
+        div(class='btn-search')
     header
       section(class='fst-part')
         aside(class='btn-menu')
           button
-        div(class='logo-u')
+        a(href='/')
+          div(class='logo-u')
         section(class='bread-crumb')
       section(class='scd-part')
     aside(class='menu-container')
       nav(class='menu-ppal')
         div
-          span Inicio
+          span(onclick='window.location.href = "/"') Inicio
 
     section(class='content')
       block content
@@ -31,4 +37,4 @@ html
         span PBX (571) 6489000
       section(class='menu-dir')
         nav(class='menu')
-          a(href='#') Inicio
+          a(href='/') Inicio
