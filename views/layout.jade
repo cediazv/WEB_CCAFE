@@ -10,31 +10,31 @@ html
     script(src='/javascripts/menu.js')
     block scripts
   body
-    aside(class='search-container')
+    aside.search-container
       div
-        aside(class='close')
+        aside.close
         input(type='text', placeholder='Ingrese su búsqueda...')
-        div(class='btn-search')
+        div.btn-search
     header
-      section(class='fst-part')
-        aside(class='btn-menu')
+      section.fst-part
+        aside.btn-menu
           button
-        div(class='logo-u', onclick='window.location.href = "/"')
-        section(class='bread-crumb')
-      section(class='scd-part')
-    aside(class='menu-container')
-      nav(class='menu-ppal')
+        div.logo-u(onclick='window.location.href = "/"')
+        section.bread-crumb'
+      section.scd-part
+    aside.menu-container
+      nav.menu-ppal
         div
           span(onclick='window.location.href = "/"') Inicio
 
-    section(class='content')
+    section.content
       block content
     footer
-      section(class='info-u')
+      section.info-u
         img(src='/images/logo.png')
         span Edificio Fundadores Av. Cra 9 No. 131 A - 02
         span Línea Gratuita 018000 113033
         span PBX (571) 6489000
-      section(class='menu-dir')
-        nav(class='menu')
+      section.menu-dir
+        nav.menu
           a(href='/') Inicio
