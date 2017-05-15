@@ -25,6 +25,10 @@ body{
 	flex-flow: column nowrap;
 }
 
+a{
+  text-decoration: none;
+}
+
 aside.search-container{
 	display: none;
 }

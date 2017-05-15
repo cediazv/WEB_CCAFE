@@ -3,6 +3,21 @@
 		manageMenu();
 		cargarMenu();
 		cargarBuscador();
+		breadCrumb();
+	}
+
+	var breadCrumb = function(){
+		window['breadCrumb'] = {
+			addItem: function(text, url) {
+				var bread = document.querySelector('.bread-crumb');
+
+				var item = document.createElement('a');
+				item.innerHTML = text;
+				item.href = url;
+
+				bread.appendChild(item);
+			}
+		}
 	}
 
 	var manageMenu = function(){

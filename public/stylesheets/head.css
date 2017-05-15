@@ -1,4 +1,4 @@
-header{
+header.head{
 	width: 100%;
 	height: 50px;
 	background-color: #F2F2F2;
@@ -60,7 +60,7 @@ div.logo-u{
 }
 
 section.bread-crumb{
-	padding: 0 10px;
+	padding: 0 25px;
 	flex: auto 100%;
 	display: -ms-flexbox;
     display: flex;
@@ -74,6 +74,21 @@ section.bread-crumb{
 	overflow-y: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+section.bread-crumb a{
+	color: #2e2e2e;
+	opacity: 0.7;
+}
+
+section.bread-crumb a:hover, 
+section.bread-crumb a:focus {
+    opacity: 1;
+}
+
+section.bread-crumb a:not(:first-child):before{
+	content: '<<';
+	padding: 0 10px;
 }
 
 @media (max-width: 768px){

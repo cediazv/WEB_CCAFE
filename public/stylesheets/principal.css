@@ -1,0 +1,105 @@
+.content{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: none;
+	-ms-flex-direction: column;
+	flex-flow: column nowrap;
+}
+
+.content header #nombre{
+    font-size: 2.2em;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.content section#contenido-inicial{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: none;
+	-ms-flex-direction: column;
+	flex-flow: column nowrap;
+}
+
+.content section#contenido-inicial > section{
+	display: -ms-flexbox;
+	display: flex;
+}
+
+	.content section#contenido-inicial > section:nth-child(odd){
+		-ms-flex-wrap: none;
+		-ms-flex-direction: row;
+		flex-flow: row nowrap;
+		background-color: #f1f1f1;
+	}
+
+	.content section#contenido-inicial > section:nth-child(even){
+		-ms-flex-wrap: none;
+		-ms-flex-direction: row-reverse;
+		flex-flow: row-reverse nowrap;
+	}
+
+.content section#contenido-inicial > section > section{
+	padding: 10px 20px;
+}
+
+.content section#contenido-inicial > section > section.izquierda{
+	text-align: center;
+}
+
+.content section#contenido-inicial > section > section.izquierda > p{
+	font-size: 1.6em;
+}
+
+.content section#contenido-inicial > section > section.derecha{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+    align-items: center;
+}
+
+.content section#contenido-inicial > section:nth-child(odd) > section.izquierda,
+.content section#contenido-inicial > section:nth-child(even) > section.derecha{
+	border-right: 1px solid silver;
+}
+
+.content nav#menu-interno{
+	min-height: 50px;
+	max-height: 50px;
+	height: 50px;
+    background-color: #7BC142;
+    display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+    align-items: center;
+	-ms-flex-wrap: none;
+	-ms-flex-direction: row;
+	flex-flow: row nowrap;
+	-ms-flex-pack: center;
+    justify-content: center;
+}
+
+.content nav#menu-interno > div {
+    padding: 0 20px;
+    color: #FFF;
+    cursor: pointer;
+    height: 100%;
+}
+
+@media (max-width: 768px){
+	.content header #nombre{
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.content section#contenido-inicial > section{
+		-ms-flex-wrap: none !important;
+		-ms-flex-direction: column !important;
+		flex-flow: column nowrap !important;
+	}
+}
+
+@media (max-width: 480px){
+	.content header #nombre{
+		font-size: 1.5em;
+	}
+}

@@ -1,12 +1,16 @@
 extends layout
 
+block link
+  link(rel='stylesheet', href='/stylesheets/principal.css')
+
 block scripts
   script(src='/javascripts/principal.js')
 
 block content
   //-h1= title
-  img#img(width='50%')
-  br
-  span#nombre
-  br
-  span Fecha creación: #[span#fecha]
+  //-span Fecha creación: #[span#fecha]
+  header
+    nav#menu-interno
+    img#img(width='100%')
+    div#nombre
+  section#contenido-inicial
