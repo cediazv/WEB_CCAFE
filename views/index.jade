@@ -1,6 +1,29 @@
 extends layout
 
+block link
+  link(rel='stylesheet', href='/stylesheets/index.css')
+
+block scripts
+  script(src='/javascripts/index.js')
+
 block content
-  //-h1= title
-  div ¡Ya casi se acaba este #{palabra} muchachos!
-  a(href='/saludo') clic para probar
+  section#carousel
+    aside#left <
+    div
+      span Noticia destacada
+      br
+      a(href='#') Ver más
+    aside#right >
+  section#squares
+    div
+      div Uno
+    div
+      div Dos
+    div
+      div Tres
+    div
+      div Cuatro
+    div
+      div Cinco
+    div
+      div Seis

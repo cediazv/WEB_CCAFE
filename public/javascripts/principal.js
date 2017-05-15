@@ -67,7 +67,7 @@
                         contenedor.appendChild(section);
                     });
 
-                    var contenedorMenu = document.getElementById('menu-interno');
+                    var contenedorMenu = document.querySelector('#menu-interno > ul');
 
                     var menu = [
                         {
@@ -93,13 +93,15 @@
                     ];
 
                     menu.forEach(function(e){
-                        var lnk = document.createElement('div');
-                        lnk.innerHTML = e.text;
-                        lnk.url = e.url;
+                        var lnk = document.createElement('li');
+                        var a = document.createElement('a');
+                        a.innerHTML = e.text;
+                        a.href = e.url;
+
                         AddEvent(lnk, 'click', function(){
                             window.lovation.href = this.url;
                         });
-
+                        lnk.appendChild(a);
                         contenedorMenu.appendChild(lnk);
                     });
 

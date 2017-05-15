@@ -9,6 +9,7 @@ header.head{
 	flex-flow: row nowrap;
 	position: fixed;
 	top: 0;
+	z-index: 999;
 }
 
 section.fst-part{

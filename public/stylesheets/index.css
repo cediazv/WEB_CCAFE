@@ -1,128 +1,130 @@
-@import url('head.css');
-
-@import url('content.css');
-
-@import url('foot.css');
-
-@import url('menu.css');
-
-html, body{
-	height: 100%;
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
+.content{
+	display: block !important;
+	position: relative;
+	flex: inherit !important;
+	height:  100%;
 }
 
-*{
-	font-family: 'latoregular';
-}
-
-body{
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: none;
-	-ms-flex-direction: column;
-	flex-flow: column nowrap;
-}
-
-a{
-  text-decoration: none;
-}
-
-aside.search-container{
-	display: none;
-}
-
-aside.search-container.show{
-	position: fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	background-color: rgba(204, 204, 204, 0.6);
-
+section#carousel{
+	height: 50%;
+	width:  100%;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-	-ms-flex-wrap: none;
-	-ms-flex-direction: column;
-	flex-flow: column nowrap;
-	z-index: 999;
+    /*-ms-flex-pack: justify;
+    justify-content: space-between;*/
+
+    background-image: url(http://www.uelbosque.edu.co/sites/default/files/talento_humano/imagenes/cabezote_trabajar_talento_humano.jpg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-aside.search-container aside.close{
-	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 0;
-	right: 0;
-	background-image: url('../images/close.svg');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 32px;
+section#carousel > div{
+	color: #FFF;
+	width: 70%;
+}
+
+section#carousel > div > span{
+	font-size: 6em;
+}
+
+section#carousel > div > a{
+    color: #fff;
+    background-color: #af2bac;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+section#carousel > div > a:hover{
+    background-color: #982195;
+}
+
+section#carousel > aside{
+	width: 15%;
 	cursor: pointer;
+	font-size: 5em;
+    color: #CCC;
+    text-align: center;
 }
 
-aside.search-container *{
-	font-size: 30px;
+section#carousel > aside:hover{
+	color: #999;
 }
 
-aside.search-container > div{
-	padding: 10px;
-	border-radius: 2px;
-	border: 1px solid #7BC142;
+section#carousel > aside#left{
+	float: left;
+}
+
+section#carousel > aside#right{
+	float: right;
+}
+
+section#squares{
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-	-ms-flex-wrap: none;
+	-ms-flex-wrap: wrap;
 	-ms-flex-direction: row;
-	flex-flow: row nowrap;
-	background-color: white;
-	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.35);
-	-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.35);
-	box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.35);
-	width: 50%;
+	flex-flow: row wrap;
+	-ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+	height: 50%;
 }
 
-aside.search-container input{
-	padding: 0;
-	border: none;
-	outline: none;
-	height: 100%;
-	width: 100%;
+section#squares > div{
+	width: 30%;
+	height: 33%;
+	margin: 5px;
+	position: relative;
+
+	background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-aside.search-container > div.focus,
-aside.search-container > div:hover{
-	-webkit-box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.5);
-	-moz-box-shadow:    2px 2px 7px 0px rgba(50, 50, 50, 0.5);
-	box-shadow:         2px 2px 7px 0px rgba(50, 50, 50, 0.5);
+section#squares > div:nth-of-type(odd){
+	background-image: url(http://cr00.epimg.net/radio/imagenes/2016/07/06/nacional/1467762063_442251_1467762222_noticia_normal.jpg);
 }
 
-aside.search-container div.btn-search{
-	width: 50px;
-	height: 50px;
-	background-image: url('../images/search.svg');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 25px;
-	cursor: pointer;
+section#squares > div:nth-of-type(even){
+	background-image: url(https://c1.staticflickr.com/9/8478/8267914018_86abd5df09_c.jpg);
+}
+
+section#squares > div > div{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+	padding:  5px;
+	border-top:  4px solid #CCC;
+	background-color: rgba(204, 204, 204, 0.7);
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
 @media (max-width: 768px){
-	aside.search-container input{
-		font-size: .9em;
+	section#carousel > div > span{
+		font-size: 4em;
+	}
+	section#carousel > div > a{
+	    font-size: .8em;
 	}
 }
 
-@media (max-width: 630px){
-	aside.search-container > div{
-		width: 90%;
+@media (max-width: 480px){
+	section#carousel > div > span{
+		font-size: 2em;
+	}
+	section#carousel > div > a{
+	    font-size: .6em;
 	}
 }
