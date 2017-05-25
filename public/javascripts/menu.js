@@ -55,6 +55,7 @@
 		var menuF = document.querySelector('nav.menu');
 		var item = function(o){
 			var div = document.createElement('div');
+			div.style.backgroundImage = 'url(/images/icons/' + o.icono_comite + ')';
 			div.setAttribute('cod_comite', o.cod_comite);
 			var span = document.createElement('span');
 			span.innerHTML = o.nombre_comite;

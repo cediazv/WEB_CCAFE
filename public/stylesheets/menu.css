@@ -45,8 +45,12 @@ nav.menu-ppal{
 	nav.menu-ppal > div{
 		padding: 10px;
 		cursor: pointer;
-		width: 100%;
-		text-align: center;
+		width: calc(100% - 20px);
+		text-align: left;
+
+		background-position: 10px center;
+		background-repeat: no-repeat;
+		background-size: 30px;
 	}
 
 	nav.menu-ppal > div:hover{
@@ -56,6 +60,7 @@ nav.menu-ppal{
 		nav.menu-ppal > div > span{
 			color: #2e2e2e;
 			text-transform: uppercase;
+			margin-left: 40px;
 		}
 
 aside.menu-container nav.menu-ppal{
