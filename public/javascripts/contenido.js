@@ -1,8 +1,10 @@
 (function(){
+    
     var codigo;
 
 	var load = function(){
 		codigo = QueryString['cod'];
+        var url = decodeURIComponent( QueryString['url'] );
 
 		var http = new XMLHttpRequest();
         http.open('GET', 'https://ccafeueb-s.herokuapp.com/committees/' + codigo, true);

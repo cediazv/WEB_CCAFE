@@ -29,7 +29,8 @@ a{
   text-decoration: none;
 }
 
-aside.search-container{
+aside.search-container,
+aside.close{
 	display: none;
 }
 
@@ -50,11 +51,11 @@ aside.search-container.show{
 	-ms-flex-wrap: none;
 	-ms-flex-direction: column;
 	flex-flow: column nowrap;
-	z-index: 999;
+	z-index: 998;
 }
 
-aside.search-container aside.close{
-	position: absolute;
+aside.close.show{
+	position: fixed;
 	height: 50px;
 	width: 50px;
 	top: 0;
@@ -64,6 +65,8 @@ aside.search-container aside.close{
 	background-repeat: no-repeat;
 	background-size: 32px;
 	cursor: pointer;
+	z-index: 999;
+	display: inherit !important;
 }
 
 aside.search-container *{

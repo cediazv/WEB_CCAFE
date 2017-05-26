@@ -60,7 +60,9 @@
 			var span = document.createElement('span');
 			span.innerHTML = o.nombre_comite;
 			div.appendChild(span);
-			div.onclick = function(){ window.location.href = '/principal?cod=' + o.cod_comite; };
+			div.onclick = function(){ 
+				window.location.href = o.url_comite ? '/contenido?url=' + encodeURIComponent(o.url_comite) + '&cod=' + o.cod_comite : '/principal?cod=' + o.cod_comite; 
+			};
 			menu.appendChild(div);
 		}
 		var itemF = function(o){
@@ -90,12 +92,14 @@
 			document.querySelector('.search-container').classList.add('show');
 			txt.focus();
 			this.style.display='none';
+			btnClose.classList.add('show');
 		}
 
-		var btnClose = document.querySelector('aside.search-container aside.close');
+		var btnClose = document.querySelector('aside.close');
 		btnClose.onclick = function(){
 			document.querySelector('.search-container').classList.remove('show');
 			btnBusqueda.style.display='';
+			this.classList.remove('show');
 		}
 	}
 
