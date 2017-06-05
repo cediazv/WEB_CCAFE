@@ -1,7 +1,6 @@
 (function(){
 	var load = function(){
 		cargarSquares();
-		cargarSquares();
 	}
 
 	var cargarSquares = function(){
