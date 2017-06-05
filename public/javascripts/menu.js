@@ -6,6 +6,18 @@
 		breadCrumb();
 	}
 
+	var modal = function(show){
+		var modalElems = document.querySelectorAll('aside.modal-background,aside.modal-content');
+		[].forEach.call(modalElems, function(e){
+			if (show){
+				e.classList.remove('oculto');
+			}
+			else{
+				e.classList.add('oculto');
+			}
+		});
+	}
+
 	var breadCrumb = function(){
 		window['breadCrumb'] = {
 			addItem: function(text, url) {
@@ -31,6 +43,11 @@
 			else{
 				btnContainer.classList.add('show');
 			}
+		}
+
+		var btnCloseModal = document.querySelector('button.modal-close');
+		btnCloseModal.onclick = function(){
+			modal(false);
 		}
 	}
 
@@ -61,17 +78,38 @@
 			span.innerHTML = o.nombre_comite;
 			div.appendChild(span);
 			div.onclick = function(){ 
-				window.location.href = o.url_comite ? '/contenido?url=' + encodeURIComponent(o.url_comite) + '&cod=' + o.cod_comite : '/principal?cod=' + o.cod_comite; 
+				if (o.cod_comite > 0){
+					window.location.href = o.url_comite ? '/contenido?url=' + encodeURIComponent(o.url_comite) + '&cod=' + o.cod_comite : '/principal?cod=' + o.cod_comite; 
+				}
+				else{
+					o.onclick.call(this);
+				}
 			};
 			menu.appendChild(div);
 		}
 		var itemF = function(o){
 			var a = document.createElement('a');
-			a.href = '/principal?cod=' + o.cod_comite;
+			if (o.cod_comite > 0){
+				a.href = o.url_comite ? '/contenido?url=' + encodeURIComponent(o.url_comite) + '&cod=' + o.cod_comite : '/principal?cod=' + o.cod_comite; 
+			}
+			else{
+				a.href = '#';
+				a.onclick = o.onclick;
+			}
 			a.innerHTML = o.nombre_comite;
 			menuF.appendChild(a);
 		}
 		comites.forEach(function(o){ item(o); itemF(o); });
+		var login = {
+			icono_comite: 'login.svg',
+			cod_comite: -1,
+			nombre_comite: 'Ingresar',
+			onclick: function(){
+				modal(true);
+			}			
+		};
+		item(login);
+		itemF(login);
 	}
 
 	var cargarBuscador = function(){

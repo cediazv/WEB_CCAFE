@@ -39,3 +39,12 @@ html
       section.menu-dir
         nav.menu
           a(href='/') Inicio
+    aside.modal-background.oculto
+    aside.modal-content.oculto
+      section.modal-title
+        span.modal-title-text Ingreso
+        button(type='button').modal-close X
+      section.modal-body
+        input(type='text', placeholder='Usuario')
+        input(type='password', placeholder='Contraseña')
+        button(type='button')#ingresar Ingresar

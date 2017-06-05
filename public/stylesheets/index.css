@@ -2,12 +2,13 @@
 	display: block !important;
 	position: relative;
 	flex: inherit !important;
-	height:  100%;
+	/*height:  100%;*/
 }
 
 section#carousel{
 	height: 50%;
 	width:  100%;
+	min-height: 330px;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
@@ -71,12 +72,13 @@ section#squares{
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-	height: 50%;
+	/*height: 50%;*/
 }
 
 section#squares > div{
 	width: 30%;
 	height: 33%;
+    min-height: 150px;
 	margin: 5px;
 	position: relative;
 
@@ -115,7 +117,8 @@ section#squares > div > div{
 	section#carousel > div > span{
 		font-size: 4em;
 	}
-	section#carousel > div > a{
+	section#carousel > div > a,
+	section#squares > div > div{
 	    font-size: .8em;
 	}
 }
@@ -124,7 +127,8 @@ section#squares > div > div{
 	section#carousel > div > span{
 		font-size: 2em;
 	}
-	section#carousel > div > a{
+	section#carousel > div > a,
+	section#squares > div > div{
 	    font-size: .6em;
 	}
 }
