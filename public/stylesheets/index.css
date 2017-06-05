@@ -121,6 +121,10 @@ section#squares > div > div{
 	section#squares > div > div{
 	    font-size: .8em;
 	}
+
+	section#carousel{
+	    background-size: auto 100%;
+	}
 }
 
 @media (max-width: 480px){
